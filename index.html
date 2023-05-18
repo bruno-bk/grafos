@@ -9,12 +9,18 @@
 </head>
 
 <body>
-    <button class="button" onclick="add_node()">add node</button>
-    <button class="button" onclick="remove_node()">rem node</button>
-    <div class="text" id="text"> </div>
-    <div id="grafo" class="graph">
-        <svg id="lines" width="400px" height="400px">
-        </svg>
+    <div id=container>
+        <div id="menu">
+            <button class="button" onclick="add_node()">add node</button>
+            <button class="button" onclick="remove_node()">remove node</button>
+            <header id="text"> </header>
+        </div>
+        <div id="graph_view">
+            <div id="graph" class="graph">
+                <svg id="lines" width="400px" height="400px">
+                </svg>
+            </div>
+        </div>
     </div>
 </body>
 

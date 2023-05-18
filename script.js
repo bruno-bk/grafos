@@ -142,7 +142,7 @@ function add_new_node(name) {
     newDiv.setAttribute('id', name);
     newDiv.setAttribute('onclick', 'selected_node(this.id)');
     newDiv.innerText = name;
-    const currentDiv = document.getElementById("grafo");
+    const currentDiv = document.getElementById("graph");
     currentDiv.appendChild(newDiv);
 }
 
