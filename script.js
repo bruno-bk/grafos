@@ -9,6 +9,7 @@ function add_node() {
         add_new_node(nodes[index][0]);
         calcule_position_nodes();
         calcule_position_edges();
+        update_table_colors();
     }
 }
 
@@ -25,6 +26,7 @@ function remove_node() {
         remove_line(node_removed[0]);
         calcule_position_nodes();
         calcule_position_edges();
+        update_table_colors();
     }
 }
 
@@ -42,7 +44,7 @@ function selected_node(index) {
         add_new_line(nodes_position[selected], nodes_position[index]);
         selected = null;
         calcule_color_to_node();
-        update_text();
+        update_table_colors();
     }
 }
 
@@ -95,20 +97,20 @@ function calcule_color_to_node() {
     }
 }
 
-function update_text() {
-    new_text = ''
+function update_table_colors() {
+    new_text = '<tr><th>Node</th><th>Color</th></tr>'
     for (node in nodes) {
-        new_text += "node "
+        new_text += "<tr><td>"
         new_text += nodes[node][0]
-        new_text += " - color "
+        new_text += "</td><td>"
         if (nodes[node][1] != 0) {
             new_text += nodes[node][1]
         } else {
             new_text += "-"
         }
-        new_text += "<br>"
+        new_text += "</tr>"
     }
-    document.getElementById("text").innerHTML = new_text
+    document.getElementById("colors_view").innerHTML = new_text
 }
 
 function calcule_position_nodes() {

@@ -48,16 +48,20 @@ html, body {
     font-size: 15px;
 }
 
-header {
-    box-sizing: border-box;
-    width: 100%;
+table{
+    width: 90%;
+}
+
+th {
+    background-color: #8f8f8f;
+}
+
+table, th, td {
+    border: 1px solid;
     position: relative;
-    border-radius: 5px;
-    display: flex;
-    margin-top: 20px;
-    justify-content: center;
-    align-items: center;
+    margin: 20px 0 5% 5%;
     font-size: 20px;
+    border-collapse: collapse;
 }
 
 .graph {
