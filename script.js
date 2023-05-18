@@ -81,6 +81,10 @@ function get_available_color(node) {
 
 function calcule_color_to_node() {
     for (node in nodes) {
+        nodes[node][1] = 0;
+    }
+
+    for (node in nodes) {
         for (edge in edges) {
             if (edges[edge][0] == nodes[node][0] || edges[edge][1] == nodes[node][0]) {
                 nodes[node][1] = get_available_color(nodes[node][0])
