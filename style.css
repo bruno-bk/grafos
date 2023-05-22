@@ -48,6 +48,30 @@ html, body {
     font-size: 15px;
 }
 
+h2 {
+    color: #333;
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-decoration: underline;
+}
+
+ul {
+    list-style-type: disc;
+    margin-left: 25px;
+    text-align: left;
+}
+
+li {
+    margin-bottom: 10px;
+    font-size: 17px;
+}
+
+strong {
+    font-weight: bold;
+    color: #000000;
+}
+
 table{
     width: 90%;
 }
