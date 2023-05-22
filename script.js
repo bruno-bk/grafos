@@ -2,9 +2,10 @@ nodes = []
 nodes_position = []
 edges = []
 selected = null;
+const MAX_NUM_OF_NODES = 20;
 
 function add_node() {
-    if (nodes.length < 20) {
+    if (nodes.length < MAX_NUM_OF_NODES) {
         index = nodes.push([nodes.length, 0]) - 1;
         add_new_node(nodes[index][0]);
         calcule_position_nodes();
@@ -58,7 +59,7 @@ function remove_line(node_number) {
 }
 
 function get_available_color(node) {
-    for (color = 1; color < 100; color++) {
+    for (color = 1; color <= MAX_NUM_OF_NODES; color++) {
         is_color = false;
         for (x = 0; x < edges.length; x++) {
             if (edges[x][0] == node || edges[x][1] == node) {
@@ -94,9 +95,9 @@ function calcule_color_to_node() {
 
     for (node in nodes) {
         if (nodes[node][1] != 0) {
-            color = (nodes[node][1] * 600000).toString(16).padStart(6, '0');
-            color = '#' + color;
+            color = 'hsl(' + ((360 / nodes.length) * nodes[node][1]) + ', 100%, 50%)';
             document.getElementById(nodes[node][0]).style.backgroundColor = color;
+            document.getElementById(nodes[node][0]).style.color = '#000000';
         }
     }
 }
